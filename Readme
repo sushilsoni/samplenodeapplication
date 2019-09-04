@@ -1,0 +1,7 @@
+Please follow the below instrcution ro run the below application
+a) You need to have a Mongo DB docker container running on default port 27017 . Use below command to start your mongo container
+    sudo docker run -d -p 27017:27017 mongo
+b) You need to pull and create container for this app using below command 
+    sudo docker run -it -p 3000:3000 --add-host=mydb:<place your aws public ip here> sushilsoni1982/workingsamplenodeapp
+c) If you want to change something in code and woould like to create a new image , please chnage the code and rebuild the docker image using below command
+   sudo docker image build -t <new image tag> .
